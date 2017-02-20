@@ -1,0 +1,210 @@
+// Project variables
+// -----------------------------------------------------------------------------
+
+// Colors
+@white: #fff;
+@bubble-grey: #424242;
+@form-dark-grey: #828282;
+@border-grey: #dbdbdb;
+@light-grey: #fafafa;
+@button-text-grey: #6b6b6b;
+@text-grey: #787878;
+@border-shadow-grey: #f6f6f6;
+@red: #ff4b1b;
+@green: #00c731;
+@blue: #009fd7;
+
+// Fonts
+@sans-serif: 'Open Sans', Verdana, sans-serif;
+
+// Wrapper
+// -----------------------------------------------------------------------------
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+// -----------------------------------------------------------------------------
+// Widget
+// -----------------------------------------------------------------------------
+.widget {
+  width: 300px;
+  min-height: 200px;
+  font-family: @sans-serif;
+}
+
+// Remaining bubble
+// -----------------------------------------------------------------------------
+.widget-remaining {
+  background: @bubble-grey;
+  color: @white;
+  border-radius: 5px;
+  padding: 15px 33px;
+  position: relative;
+  margin-bottom: 20px;
+  font-family: @sans-serif;
+  font-size: 15px;
+
+  &:after {
+    content: ' ';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: @bubble-grey;
+    position: absolute;
+    right: 10%;
+    bottom: -5px;
+    transform: rotate(45deg);
+  }
+}
+
+// Widget form
+// -----------------------------------------------------------------------------
+.widget-form {
+  border: 1px solid @border-grey;
+  padding: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  box-shadow: 0 3px 0px @light-grey;
+
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: @text-grey;
+  }
+
+  em {
+    color: @red;
+    font-style: normal;
+  }
+
+  form {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  input {
+    height: 44px;
+    line-height: 44px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: @sans-serif;
+    width: ~"calc(50% - 8px)";
+  }
+
+  input[type='text'],
+  .widget-input-prefix {
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  input[type='text'] {
+    border: 1px solid @border-grey;
+    border-radius: 5px;
+    margin-right: 8px;
+    box-shadow: inset 0 0 5px @light-grey;
+    padding-left: 25px;
+    display: block;
+
+    &.invalid {
+      border-color: @red;
+      box-shadow: 0 0 3px @red;
+    }
+  }
+
+  .widget-input-prefix {
+    content: '$';
+    color: @form-dark-grey;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+  }
+
+  input[type='submit'] {
+    background: @green;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid darken(@green, 5%);
+    box-shadow: 0 1px 0 darken(@green, 5%);
+    margin-left: 8px;
+    cursor: pointer;
+  }
+}
+
+.widget-progress {
+  background: @light-grey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  border-bottom: 1px solid @border-grey;
+}
+
+.widget-bar {
+  background: @red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+}
+
+.widget-help-message {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: @blue;
+  font-style: italic;
+  font-family: @sans-serif;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+// Widget tools
+// -----------------------------------------------------------------------------
+.widget-tools {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  button {
+    width: ~"calc(50% - 8px)";
+  }
+
+  .widget-save-button,
+  .widget-share-button {
+    background: @light-grey;
+    border: 1px solid @border-grey;
+    border-radius: 5px;
+    height: 36px;
+    line-height: 30px;
+    font-family: @sans-serif;
+    font-size: 13px;
+    vertical-align: middle;
+    color: @form-dark-grey;
+    font-weight: bold;
+    box-shadow: 0 1px 1px @border-grey;
+    cursor: pointer;
+
+  }
+
+  .widget-save-button {
+    margin-right: 8px;
+  }
+
+  .widget-share-button {
+    margin-left: 8px;
+  }
+}

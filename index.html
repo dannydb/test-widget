@@ -6,14 +6,43 @@
         <title>Test widget</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <link rel="stylesheet" href="public/normalize.css">
         <link rel="stylesheet" href="public/style.css">
     </head>
     <body>
 
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <div class="main">
+          <div class="widget">
+            <div class="widget-remaining"><strong>$167</strong> still needed for this project</div>
+
+            <div class="widget-form">
+              <div class="widget-progress">
+                <div class="widget-bar" style="width: 73%;"></div>
+              </div>
+
+              <p><em>Only 3 days left</em> to fund this project.</p>
+
+              <p>Join the <strong>42</strong> other donors who have already supported this project. Every dollar helps.</p>
+
+              <form action="#">
+                <div class="widget-input-prefix">$</div>
+                <input type="text" min="0.01" value="50" />
+                <input type="submit" value="Give Now">
+              </form>
+              <button class="widget-help-message">Why give $50?</button>
+            </div>
+
+            <div class="widget-tools">
+              <button class="widget-save-button js-save">Save for later</button>
+              <button class="widget-share-button js-share">Tell your friends</button>
+            </div>
+          </div>
+        </div>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
         <script src="script.js"></script>
+        <script src="https://use.typekit.net/beg3ngn.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
     </body>
 </html>
