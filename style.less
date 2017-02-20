@@ -17,6 +17,14 @@
 // Fonts
 @sans-serif: 'Open Sans', Verdana, sans-serif;
 
+
+// Utility
+// -----------------------------------------------------------------------------
+.hide {
+  opacity: 0;
+}
+
+
 // Wrapper
 // -----------------------------------------------------------------------------
 .main {
@@ -72,7 +80,7 @@
   margin-bottom: 15px;
   position: relative;
   box-shadow: 0 3px 0px @light-grey;
-
+  transition: opacity 0.3s ease-in;
 
   p {
     font-size: 14px;
@@ -140,6 +148,10 @@
     box-shadow: 0 1px 0 darken(@green, 5%);
     margin-left: 8px;
     cursor: pointer;
+
+    &:hover {
+      background: lighten(@green, 2%);
+    }
   }
 }
 
@@ -159,6 +171,7 @@
   top: 0;
   left: 0;
   height: 12px;
+  transition: width 0.5s ease-in;
 }
 
 .widget-help-message {
@@ -170,6 +183,20 @@
   font-family: @sans-serif;
   font-size: 12px;
   margin-top: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.widget-succes-message {
+  font-size: 24px;
+  font-weight: bold;
+  transition: opacity 0.3s ease-in;
+  margin-bottom: -24px;
+  pointer-events: none;
 }
 
 // Widget tools
@@ -197,6 +224,10 @@
     font-weight: bold;
     box-shadow: 0 1px 1px @border-grey;
     cursor: pointer;
+
+    &:hover {
+      background: lighten(@light-grey, 5%);
+    }
 
   }
 

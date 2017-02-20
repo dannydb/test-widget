@@ -14,23 +14,24 @@
 
         <div class="main">
           <div class="widget">
-            <div class="widget-remaining"><strong>$167</strong> still needed for this project</div>
+            <div class="widget-remaining"><strong class="js-remaining">$167</strong> still needed for this project</div>
 
             <div class="widget-form">
               <div class="widget-progress">
-                <div class="widget-bar" style="width: 73%;"></div>
+                <div class="widget-bar js-bar" style="width: 73%;"></div>
               </div>
 
               <p><em>Only 3 days left</em> to fund this project.</p>
 
               <p>Join the <strong>42</strong> other donors who have already supported this project. Every dollar helps.</p>
 
-              <form action="#">
+              <p class="widget-succes-message js-success hide">Thank you!</p>
+              <form class="js-form" action="#">
                 <div class="widget-input-prefix">$</div>
-                <input type="text" min="0.01" value="50" />
-                <input type="submit" value="Give Now">
+                <input class="js-amount" type="text" min="0.01" value="50" />
+                <input class="js-submit" type="submit" value="Give Now">
               </form>
-              <button class="widget-help-message">Why give $50?</button>
+              <button class="js-help widget-help-message">Why give $50?</button>
             </div>
 
             <div class="widget-tools">

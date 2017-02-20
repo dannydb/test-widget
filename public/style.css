@@ -1,3 +1,6 @@
+.hide {
+  opacity: 0;
+}
 .main {
   display: -ms-flexbox;
   display: flex;
@@ -43,6 +46,7 @@
   margin-bottom: 15px;
   position: relative;
   box-shadow: 0 3px 0px #fafafa;
+  transition: opacity 0.3s ease-in;
 }
 .widget-form p {
   font-size: 14px;
@@ -106,6 +110,9 @@
   margin-left: 8px;
   cursor: pointer;
 }
+.widget-form input[type='submit']:hover {
+  background: #00d134;
+}
 .widget-progress {
   background: #fafafa;
   position: absolute;
@@ -121,6 +128,7 @@
   top: 0;
   left: 0;
   height: 12px;
+  transition: width 0.5s ease-in;
 }
 .widget-help-message {
   background: none;
@@ -131,6 +139,18 @@
   font-family: 'Open Sans', Verdana, sans-serif;
   font-size: 12px;
   margin-top: 10px;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in;
+}
+.widget-help-message:hover {
+  text-decoration: underline;
+}
+.widget-succes-message {
+  font-size: 24px;
+  font-weight: bold;
+  transition: opacity 0.3s ease-in;
+  margin-bottom: -24px;
+  pointer-events: none;
 }
 .widget-tools {
   display: -ms-flexbox;
@@ -157,6 +177,10 @@
   font-weight: bold;
   box-shadow: 0 1px 1px #dbdbdb;
   cursor: pointer;
+}
+.widget-tools .widget-save-button:hover,
+.widget-tools .widget-share-button:hover {
+  background: #ffffff;
 }
 .widget-tools .widget-save-button {
   margin-right: 8px;
