@@ -20,8 +20,9 @@ var init = function() {
 var onSubmitClick = function(e) {
   e.preventDefault();
 
-  var newAmount = $amount.val() + CURRENT_AMOUNT;
-  var barWidth = Math.floor(newAmount/GOAL_AMOUNT);
+  var amount = $amount.val();
+  var newAmount = parseInt($amount.val()) + CURRENT_AMOUNT;
+  var barWidth = Math.floor((newAmount/GOAL_AMOUNT)  * 100);
   var newRemaining = '$' + (CURRENT_REMAINING - $amount.val());
 
   $bar.width(barWidth + '%');
